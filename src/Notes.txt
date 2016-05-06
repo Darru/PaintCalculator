@@ -1,0 +1,89 @@
+Build management - prepare environment, gether code, create build logs, update build status etc.
+	Assembles all the components of a software application into an installable software.
+
+Git - DVCS. 
+
+vagrant reload --provision
+
+Jenkins - continous intergration tool. 
+
+Maven - build automation tool. Buid management. 
+
+jira - Jira is a proprietary issue tracking product. 
+	It provides bug tracking, issue tracking, and project management functions. 
+
+POM = details dependencies.
+
+TDD - Test Drivern Development.
+BDD - Behaviour Drivern Development.
+
+CI: Speeds up development so teams dont work on the same thing. Utilises build test deploy.
+
+CDevelopment: Allows you to continuously add features to software. Win7, anti-virus.
+
+Linux
+
+Vagrant: Cotrols virtual environments.
+
+
+					IPtables "Firewalls"
+IP tables. Flexible firewall utility. 
+
+sudo ufw status
+	 enable
+	 disable
+	 reload
+
+sudo ufw allow 22
+sudo ufw allo ssh
+sudo ufw delete allow 22 (/tcp or /udp)
+sudo ufw allow from 192.168.0.4 to any port 22
+sudo iptables -L -n -v (status IPv4) List
+
+
+
+sudo apt-get install -y openssh-server openssh-client
+
+
+Artefact - finished product or part. End of sprint.
+
+
+sudo wget -q -O- https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+
+sudo apt-get install -y jenkins
+
+8080 = jenkins default port
+
+cat
+
+
+zgrep sshd /var/log/auth*
+
+touch 'file' create file
+
+git status
+	add 'file name'
+git commit -m "Added file" *JIRA* "issuakey #comment"  git commit -m "issuekey #comment stuff #time 10m"
+git push origin master
+
+git status
+git add -A 'file'
+git commit -m "Deleted file"
+git push origin master
+
+git pull origin master
+
+cvcs - centralised version control system. No local save. Single point vailure.
+dvcs - distributed version control system. Mirror repository. Should have most recent up-to-date code.
+
+ssh-keygen -t rsa -C "email"
+eval "$(ssh-agent)"
+ssh-add /c/Users/'UserName'/.ssh/id_rsa
+cat /c/Users/'UserName'/.ssh/id_rsa.pub
+
+sudo su jenkins -s /bin/bash
+
+vagrant file
+instances jira jenkins
